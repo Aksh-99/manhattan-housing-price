@@ -1,0 +1,9 @@
+# Data files - large, and mostly reproducible from the pipeline itself.
+# See README.md for where to source the raw input file.
+*.csv
+*.html
+*.png
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
