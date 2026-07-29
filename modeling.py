@@ -18,25 +18,15 @@ except ImportError:
  
  
 def _inverse_log_transform(values: np.ndarray) -> np.ndarray:
-    """Undo add_log_target's signed log1p transform, for interpretable MAE."""
     return np.sign(values) * np.expm1(np.abs(values))
  
  
 def ensemble_predict(models: dict, X) -> np.ndarray:
-    """Average predictions across multiple fitted models (simple, unweighted
-    ensemble). Often reduces variance versus any single model, especially
-    useful on a small dataset like this one where any single model's split
-    performance can be noisy."""
     preds = np.column_stack([m.predict(X) for m in models.values()])
     return preds.mean(axis=1)
  
  
 def three_way_split(model_df: pd.DataFrame, val_year: int, test_year: int):
-    """Train / validation / final-test split by BASE_YEAR, so repeated
-    comparisons (e.g. testing several feature/model ideas) are checked
-    against the validation set, keeping the final test set untouched until
-    a single approach is chosen - avoids quietly overfitting to one small
-    held-out set through repeated iteration."""
     train_mask = model_df["BASE_YEAR"] < val_year
     val_mask = (model_df["BASE_YEAR"] >= val_year) & (model_df["BASE_YEAR"] < test_year)
     test_mask = model_df["BASE_YEAR"] >= test_year
@@ -46,10 +36,6 @@ def three_way_split(model_df: pd.DataFrame, val_year: int, test_year: int):
 def evaluate_ensemble(model_df: pd.DataFrame, target_col: str, val_year: int, test_year: int,
                         exclude_cols: list[str] | None = None, is_log_target: bool = False,
                         group_col: str = "NEIGHBORHOOD"):
-    """`group_col` is the identifier column to exclude from features (e.g.
-    "NEIGHBORHOOD" for the standard dataset, or another grouping column for
-    a different granularity) - defaults to NEIGHBORHOOD so existing calls
-    don't need to change."""
     drop_cols = [target_col, group_col] + (exclude_cols or [])
     feature_cols = [c for c in model_df.columns if c not in drop_cols]
  
@@ -118,10 +104,6 @@ def evaluate_models(X_train, X_test, y_train, y_test, split_label: str,
 def compare_random_vs_time_split(model_df: pd.DataFrame, target_col: str,
                                    is_log_target: bool = False,
                                    exclude_cols: list[str] | None = None) -> pd.DataFrame:
-    """`exclude_cols` must include any OTHER target-derived column - e.g. when
-    target_col is a log-transformed target, the original raw growth-rate
-    column must be excluded too, or the model gets handed the answer as an
-    input feature (caught via a suspicious ~1.0 R^2 on random-split testing)."""
     drop_cols = [target_col, "NEIGHBORHOOD"] + (exclude_cols or [])
     X = model_df.drop(columns=[c for c in drop_cols if c in model_df.columns])
     y = model_df[target_col]
@@ -144,14 +126,6 @@ def compare_random_vs_time_split(model_df: pd.DataFrame, target_col: str,
 def rolling_window_evaluate(model_df: pd.DataFrame, target_col: str, min_train_years: int = 8,
                               exclude_cols: list[str] | None = None, is_log_target: bool = False,
                               group_col: str = "NEIGHBORHOOD") -> pd.DataFrame:
-    """Expanding-window validation: train on all years before Y, test on
-    year Y, for every Y with at least `min_train_years` of training data
-    available. Uses every year as a genuine held-out test exactly once
-    (never trains on a year it's later tested on - no leakage), giving a
-    more robust per-year performance picture than one single train/test
-    split, and making it possible to see WHICH years a model struggles on
-    (e.g. genuine crisis years) rather than only a single blended average
-    that can hide this."""
     drop_cols = [target_col, group_col] + (exclude_cols or [])
     feature_cols = [c for c in model_df.columns if c not in drop_cols]
  
@@ -198,11 +172,6 @@ def rolling_window_evaluate(model_df: pd.DataFrame, target_col: str, min_train_y
  
 def train_primary_model(model_df: pd.DataFrame, target_col: str,
                           exclude_cols: list[str] | None = None) -> tuple:
-    """Train the primary (RandomForest) model on the time-based train split.
-    Returns (model, X_train, X_test, y_train, y_test) for downstream SHAP use.
-    `exclude_cols` must include any other target-derived column (e.g. the raw
-    growth-rate column when target_col is its log-transformed version) - see
-    the same leakage note on compare_random_vs_time_split."""
     drop_cols = [target_col, "NEIGHBORHOOD"] + (exclude_cols or [])
     X = model_df.drop(columns=[c for c in drop_cols if c in model_df.columns])
     y = model_df[target_col]
