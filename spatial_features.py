@@ -52,18 +52,12 @@ def query_overpass(query: str, max_retries: int = 3) -> dict | None:
             return resp.json()
         except Exception as e:
             print(f"  attempt {attempt + 1} failed: {e}")
-            time.sleep(15 * (attempt + 1))  # Overpass rate-limits hard; back off generously
+            time.sleep(15 * (attempt + 1))  # Overpass rate-limits hard
     return None
  
  
 def _elements_to_df(osm_json: dict | None, label: str) -> pd.DataFrame:
     if osm_json is None:
-        # Explicitly typed, even when empty - an untyped/object-dtype empty
-        # frame silently upcasts LATITUDE/LONGITUDE to object across ALL
-        # amenity types once concatenated in fetch_all_amenities, even ones
-        # that queried successfully. That upcast then breaks np.radians()
-        # deep in haversine_km with a confusing "float has no attribute
-        # radians" error far from the actual cause.
         return pd.DataFrame({
             "LATITUDE": pd.Series(dtype="float64"),
             "LONGITUDE": pd.Series(dtype="float64"),
@@ -84,12 +78,6 @@ def _elements_to_df(osm_json: dict | None, label: str) -> pd.DataFrame:
  
  
 def fetch_all_amenities(force_refresh: bool = False) -> pd.DataFrame:
-    """Fetches each amenity category separately, caching each to its own CSV
-    as soon as it succeeds. If a later category fails (Overpass rate-limits
-    hard - see retry/backoff in query_overpass), previously-successful
-    categories are loaded from cache instead of re-queried. Pass
-    force_refresh=True to ignore existing per-category caches and re-fetch
-    everything."""
     import os
  
     frames = []
@@ -128,13 +116,6 @@ def haversine_km(lat1, lon1, lat2, lon2):
  
  
 def add_distance_features(df_props: pd.DataFrame, amenities: pd.DataFrame) -> pd.DataFrame:
-    """For each property, add nearest-distance (km) and amenity counts
-    within 500m/1km, for every amenity type in QUERIES. Iterates over the
-    known QUERIES keys (not just amenities["TYPE"].unique()) so that a
-    failed Overpass query for one category still produces NaN/0 columns
-    for that type, rather than silently omitting it - otherwise the
-    output schema would vary run to run depending on which of Overpass's
-    queries happened to succeed."""
     df_props = df_props.copy()
     prop_coords = df_props[["LATITUDE", "LONGITUDE"]].values
  
