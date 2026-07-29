@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_16898c6cb73362994e06bdb3bb9ae0df {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_16898c6cb73362994e06bdb3bb9ae0df" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_16898c6cb73362994e06bdb3bb9ae0df = L.map(
+                "map_16898c6cb73362994e06bdb3bb9ae0df",
+                {
+                    center: [40.78, -73.96],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f78f8e765176b9946f4461a51e298345 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_f78f8e765176b9946f4461a51e298345.addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+            var circle_marker_27a8d75f33f8782c5a1ea0b3782b0e67 = L.circleMarker(
+                [40.72512683577468, -73.98044105727224],
+                {"bubblingMouseEvents": true, "color": "#fff400ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fff400ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+        var popup_b1fff356ada2b15eee51ae04caf951df = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_294e2c1ad37c722805e5a633d6f632bb = $(`<div id="html_294e2c1ad37c722805e5a633d6f632bb" style="width: 100.0%; height: 100.0%;">ALPHABET CITY: 4.7% predicted growth</div>`)[0];
+                popup_b1fff356ada2b15eee51ae04caf951df.setContent(html_294e2c1ad37c722805e5a633d6f632bb);
+            
+        
+
+        circle_marker_27a8d75f33f8782c5a1ea0b3782b0e67.bindPopup(popup_b1fff356ada2b15eee51ae04caf951df)
+        ;
+
+        
+    
+    
+            circle_marker_27a8d75f33f8782c5a1ea0b3782b0e67.bindTooltip(
+                `<div>
+                     ALPHABET CITY
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b74aa2b0e823d223124b7770287abf78 = L.circleMarker(
+                [40.7443193694575, -73.99934884747852],
+                {"bubblingMouseEvents": true, "color": "#fffa00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fffa00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+        var popup_c96bafb05fc53fbb3b9aa544bf488ae8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a1045b35b00f135237cd5eb4fa1b8806 = $(`<div id="html_a1045b35b00f135237cd5eb4fa1b8806" style="width: 100.0%; height: 100.0%;">CHELSEA: 3.4% predicted growth</div>`)[0];
+                popup_c96bafb05fc53fbb3b9aa544bf488ae8.setContent(html_a1045b35b00f135237cd5eb4fa1b8806);
+            
+        
+
+        circle_marker_b74aa2b0e823d223124b7770287abf78.bindPopup(popup_c96bafb05fc53fbb3b9aa544bf488ae8)
+        ;
+
+        
+    
+    
+            circle_marker_b74aa2b0e823d223124b7770287abf78.bindTooltip(
+                `<div>
+                     CHELSEA
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_457a53531028140e903df4d4b7af5a47 = L.circleMarker(
+                [40.7171967453985, -73.99976568374882],
+                {"bubblingMouseEvents": true, "color": "#ff6c00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6c00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+        var popup_adee5b8cce5030cd1ee279825b707fc6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_230892c545d3acf36c1281ad21fa47f8 = $(`<div id="html_230892c545d3acf36c1281ad21fa47f8" style="width: 100.0%; height: 100.0%;">CHINATOWN: 26.0% predicted growth</div>`)[0];
+                popup_adee5b8cce5030cd1ee279825b707fc6.setContent(html_230892c545d3acf36c1281ad21fa47f8);
+            
+        
+
+        circle_marker_457a53531028140e903df4d4b7af5a47.bindPopup(popup_adee5b8cce5030cd1ee279825b707fc6)
+        ;
+
+        
+    
+    
+            circle_marker_457a53531028140e903df4d4b7af5a47.bindTooltip(
+                `<div>
+                     CHINATOWN
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bbfbbaeef2df2cfa7122be2064f0b4fa = L.circleMarker(
+                [40.715334454255704, -74.00542758209444],
+                {"bubblingMouseEvents": true, "color": "#ffd900ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffd900ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+        var popup_3e21c6eae841b7010a30928f313412b2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2d7d0d5ac8fb7e0284464d66e13a1995 = $(`<div id="html_2d7d0d5ac8fb7e0284464d66e13a1995" style="width: 100.0%; height: 100.0%;">CIVIC CENTER: 10.0% predicted growth</div>`)[0];
+                popup_3e21c6eae841b7010a30928f313412b2.setContent(html_2d7d0d5ac8fb7e0284464d66e13a1995);
+            
+        
+
+        circle_marker_bbfbbaeef2df2cfa7122be2064f0b4fa.bindPopup(popup_3e21c6eae841b7010a30928f313412b2)
+        ;
+
+        
+    
+    
+            circle_marker_bbfbbaeef2df2cfa7122be2064f0b4fa.bindTooltip(
+                `<div>
+                     CIVIC CENTER
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1972f55e516f2e8739b346bb9e8405e5 = L.circleMarker(
+                [40.763525711625256, -73.9929451917339],
+                {"bubblingMouseEvents": true, "color": "#f9fc00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f9fc00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+        var popup_3a2d28497b6082bbf3a498274acbd6aa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_37285731de805e5c67dc5974a5e9124b = $(`<div id="html_37285731de805e5c67dc5974a5e9124b" style="width: 100.0%; height: 100.0%;">CLINTON: 2.0% predicted growth</div>`)[0];
+                popup_3a2d28497b6082bbf3a498274acbd6aa.setContent(html_37285731de805e5c67dc5974a5e9124b);
+            
+        
+
+        circle_marker_1972f55e516f2e8739b346bb9e8405e5.bindPopup(popup_3a2d28497b6082bbf3a498274acbd6aa)
+        ;
+
+        
+    
+    
+            circle_marker_1972f55e516f2e8739b346bb9e8405e5.bindTooltip(
+                `<div>
+                     CLINTON
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6e63ac4e25739233170ac539543d4c03 = L.circleMarker(
+                [40.72911765370882, -73.98629777768255],
+                {"bubblingMouseEvents": true, "color": "#d7eb00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d7eb00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+        var popup_02b9114f820825fce205a5e5661a4ef3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a9f1b0761a0f418a5e8aa9b2685c22f2 = $(`<div id="html_a9f1b0761a0f418a5e8aa9b2685c22f2" style="width: 100.0%; height: 100.0%;">EAST VILLAGE: -0.4% predicted growth</div>`)[0];
+                popup_02b9114f820825fce205a5e5661a4ef3.setContent(html_a9f1b0761a0f418a5e8aa9b2685c22f2);
+            
+        
+
+        circle_marker_6e63ac4e25739233170ac539543d4c03.bindPopup(popup_02b9114f820825fce205a5e5661a4ef3)
+        ;
+
+        
+    
+    
+            circle_marker_6e63ac4e25739233170ac539543d4c03.bindTooltip(
+                `<div>
+                     EAST VILLAGE
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d838f55924e18973afe9ff578ba0c6f2 = L.circleMarker(
+                [40.749882924174884, -73.98845501324571],
+                {"bubblingMouseEvents": true, "color": "#ffc400ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffc400ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+        var popup_743ae3fa3de9872de6750137ffa8748d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d2f2b2ab0cba8205d872d91092038b57 = $(`<div id="html_d2f2b2ab0cba8205d872d91092038b57" style="width: 100.0%; height: 100.0%;">FASHION: 14.0% predicted growth</div>`)[0];
+                popup_743ae3fa3de9872de6750137ffa8748d.setContent(html_d2f2b2ab0cba8205d872d91092038b57);
+            
+        
+
+        circle_marker_d838f55924e18973afe9ff578ba0c6f2.bindPopup(popup_743ae3fa3de9872de6750137ffa8748d)
+        ;
+
+        
+    
+    
+            circle_marker_d838f55924e18973afe9ff578ba0c6f2.bindTooltip(
+                `<div>
+                     FASHION
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3c776db7d3df346fafd9f7780e8ba9fb = L.circleMarker(
+                [40.70707195821574, -74.01049340959149],
+                {"bubblingMouseEvents": true, "color": "#ffed00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffed00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+        var popup_906c4d81efaaff872f9059e45dcb0108 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3bccf05abaaf4014096432153f1643ef = $(`<div id="html_3bccf05abaaf4014096432153f1643ef" style="width: 100.0%; height: 100.0%;">FINANCIAL: 5.9% predicted growth</div>`)[0];
+                popup_906c4d81efaaff872f9059e45dcb0108.setContent(html_3bccf05abaaf4014096432153f1643ef);
+            
+        
+
+        circle_marker_3c776db7d3df346fafd9f7780e8ba9fb.bindPopup(popup_906c4d81efaaff872f9059e45dcb0108)
+        ;
+
+        
+    
+    
+            circle_marker_3c776db7d3df346fafd9f7780e8ba9fb.bindTooltip(
+                `<div>
+                     FINANCIAL
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4c2c677ae004d6cb4ca1927d31e976a5 = L.circleMarker(
+                [40.73957008126464, -73.99037111303525],
+                {"bubblingMouseEvents": true, "color": "#fff800ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fff800ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+        var popup_d993e1808495c936894cd10531075665 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c78d9984937a5758567c00c6d24a8721 = $(`<div id="html_c78d9984937a5758567c00c6d24a8721" style="width: 100.0%; height: 100.0%;">FLATIRON: 3.9% predicted growth</div>`)[0];
+                popup_d993e1808495c936894cd10531075665.setContent(html_c78d9984937a5758567c00c6d24a8721);
+            
+        
+
+        circle_marker_4c2c677ae004d6cb4ca1927d31e976a5.bindPopup(popup_d993e1808495c936894cd10531075665)
+        ;
+
+        
+    
+    
+            circle_marker_4c2c677ae004d6cb4ca1927d31e976a5.bindTooltip(
+                `<div>
+                     FLATIRON
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f735c1bcba7b947df76e5a396b5c2024 = L.circleMarker(
+                [40.73762424807487, -73.98462395538202],
+                {"bubblingMouseEvents": true, "color": "#fffc00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fffc00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+        var popup_7a978ff1a5f46a78578e24ad14d72fcc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_37111f433392783986c51575625f4e7c = $(`<div id="html_37111f433392783986c51575625f4e7c" style="width: 100.0%; height: 100.0%;">GRAMERCY: 3.0% predicted growth</div>`)[0];
+                popup_7a978ff1a5f46a78578e24ad14d72fcc.setContent(html_37111f433392783986c51575625f4e7c);
+            
+        
+
+        circle_marker_f735c1bcba7b947df76e5a396b5c2024.bindPopup(popup_7a978ff1a5f46a78578e24ad14d72fcc)
+        ;
+
+        
+    
+    
+            circle_marker_f735c1bcba7b947df76e5a396b5c2024.bindTooltip(
+                `<div>
+                     GRAMERCY
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b86e5de0bc2c045515227b11de4f4624 = L.circleMarker(
+                [40.731697640793904, -73.99460325068105],
+                {"bubblingMouseEvents": true, "color": "#fbfd00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fbfd00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+        var popup_39cdfa5dd4f87df1685b8763279ac04e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0b6846fe7d2d9694b9eafe8ce021d192 = $(`<div id="html_0b6846fe7d2d9694b9eafe8ce021d192" style="width: 100.0%; height: 100.0%;">GREENWICH VILLAGE-CENTRAL: 2.1% predicted growth</div>`)[0];
+                popup_39cdfa5dd4f87df1685b8763279ac04e.setContent(html_0b6846fe7d2d9694b9eafe8ce021d192);
+            
+        
+
+        circle_marker_b86e5de0bc2c045515227b11de4f4624.bindPopup(popup_39cdfa5dd4f87df1685b8763279ac04e)
+        ;
+
+        
+    
+    
+            circle_marker_b86e5de0bc2c045515227b11de4f4624.bindTooltip(
+                `<div>
+                     GREENWICH VILLAGE-CENTRAL
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_751218f0d71934f90f5daa4195969c9b = L.circleMarker(
+                [40.73518246003457, -74.00458200977964],
+                {"bubblingMouseEvents": true, "color": "#fffe00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fffe00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+        var popup_21b028c2ce3145d9a6528855daa7e227 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1bc0c9f0777b8f8867015f4cb354c440 = $(`<div id="html_1bc0c9f0777b8f8867015f4cb354c440" style="width: 100.0%; height: 100.0%;">GREENWICH VILLAGE-WEST: 2.7% predicted growth</div>`)[0];
+                popup_21b028c2ce3145d9a6528855daa7e227.setContent(html_1bc0c9f0777b8f8867015f4cb354c440);
+            
+        
+
+        circle_marker_751218f0d71934f90f5daa4195969c9b.bindPopup(popup_21b028c2ce3145d9a6528855daa7e227)
+        ;
+
+        
+    
+    
+            circle_marker_751218f0d71934f90f5daa4195969c9b.bindTooltip(
+                `<div>
+                     GREENWICH VILLAGE-WEST
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_289714708320a1b53408c5c412c09bcb = L.circleMarker(
+                [40.80969612393108, -73.9472723728691],
+                {"bubblingMouseEvents": true, "color": "#f5fa00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f5fa00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+        var popup_f2741a53bd563148fb132e415d0bb892 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9fcdb812b9d572647c8266f4cdd67ee2 = $(`<div id="html_9fcdb812b9d572647c8266f4cdd67ee2" style="width: 100.0%; height: 100.0%;">HARLEM-CENTRAL: 1.7% predicted growth</div>`)[0];
+                popup_f2741a53bd563148fb132e415d0bb892.setContent(html_9fcdb812b9d572647c8266f4cdd67ee2);
+            
+        
+
+        circle_marker_289714708320a1b53408c5c412c09bcb.bindPopup(popup_f2741a53bd563148fb132e415d0bb892)
+        ;
+
+        
+    
+    
+            circle_marker_289714708320a1b53408c5c412c09bcb.bindTooltip(
+                `<div>
+                     HARLEM-CENTRAL
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bd2898c71af2b92dfbb86bd275158682 = L.circleMarker(
+                [40.79363824249952, -73.94260472597799],
+                {"bubblingMouseEvents": true, "color": "#ffe600ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffe600ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+        var popup_c3ad2b1fa40aa33a0f7e4dd18b28d290 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b9e41021de6b935f36fb3f4f746e6acc = $(`<div id="html_b9e41021de6b935f36fb3f4f746e6acc" style="width: 100.0%; height: 100.0%;">HARLEM-EAST: 7.3% predicted growth</div>`)[0];
+                popup_c3ad2b1fa40aa33a0f7e4dd18b28d290.setContent(html_b9e41021de6b935f36fb3f4f746e6acc);
+            
+        
+
+        circle_marker_bd2898c71af2b92dfbb86bd275158682.bindPopup(popup_c3ad2b1fa40aa33a0f7e4dd18b28d290)
+        ;
+
+        
+    
+    
+            circle_marker_bd2898c71af2b92dfbb86bd275158682.bindTooltip(
+                `<div>
+                     HARLEM-EAST
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_de659dee5d20802409e1420f99dd0070 = L.circleMarker(
+                [40.82736538912605, -73.9482957666753],
+                {"bubblingMouseEvents": true, "color": "#d5ea00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d5ea00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+        var popup_4bca9a6d48c6871ea4caeb3cece99296 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3a5ffb5e08ff12e9d8630275d99644a8 = $(`<div id="html_3a5ffb5e08ff12e9d8630275d99644a8" style="width: 100.0%; height: 100.0%;">HARLEM-UPPER: -0.6% predicted growth</div>`)[0];
+                popup_4bca9a6d48c6871ea4caeb3cece99296.setContent(html_3a5ffb5e08ff12e9d8630275d99644a8);
+            
+        
+
+        circle_marker_de659dee5d20802409e1420f99dd0070.bindPopup(popup_4bca9a6d48c6871ea4caeb3cece99296)
+        ;
+
+        
+    
+    
+            circle_marker_de659dee5d20802409e1420f99dd0070.bindTooltip(
+                `<div>
+                     HARLEM-UPPER
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0b4e9cc2671ba2c4e5b3abec6b7d3f52 = L.circleMarker(
+                [40.81823757069254, -73.95377447008228],
+                {"bubblingMouseEvents": true, "color": "#ff0000ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+        var popup_1e83463b6b418565f103cba80a303466 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e3c90d62b433226e5ac2d91642f8bedf = $(`<div id="html_e3c90d62b433226e5ac2d91642f8bedf" style="width: 100.0%; height: 100.0%;">HARLEM-WEST: 37.6% predicted growth</div>`)[0];
+                popup_1e83463b6b418565f103cba80a303466.setContent(html_e3c90d62b433226e5ac2d91642f8bedf);
+            
+        
+
+        circle_marker_0b4e9cc2671ba2c4e5b3abec6b7d3f52.bindPopup(popup_1e83463b6b418565f103cba80a303466)
+        ;
+
+        
+    
+    
+            circle_marker_0b4e9cc2671ba2c4e5b3abec6b7d3f52.bindTooltip(
+                `<div>
+                     HARLEM-WEST
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c28e0e0edb3e96bfea8be6264711fb0a = L.circleMarker(
+                [40.8699728691751, -73.91910350461322],
+                {"bubblingMouseEvents": true, "color": "#ffe900ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffe900ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+        var popup_4b3d6bcdb2e6e834bea9c3cdaf4606b4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c6f3e550f4758c1f220d34bdef1890a4 = $(`<div id="html_c6f3e550f4758c1f220d34bdef1890a4" style="width: 100.0%; height: 100.0%;">INWOOD: 6.8% predicted growth</div>`)[0];
+                popup_4b3d6bcdb2e6e834bea9c3cdaf4606b4.setContent(html_c6f3e550f4758c1f220d34bdef1890a4);
+            
+        
+
+        circle_marker_c28e0e0edb3e96bfea8be6264711fb0a.bindPopup(popup_4b3d6bcdb2e6e834bea9c3cdaf4606b4)
+        ;
+
+        
+    
+    
+            circle_marker_c28e0e0edb3e96bfea8be6264711fb0a.bindTooltip(
+                `<div>
+                     INWOOD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f0c295ebe8efaeb1d069200eae480a4d = L.circleMarker(
+                [40.74247741401662, -73.97611144227542],
+                {"bubblingMouseEvents": true, "color": "#2f9800ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2f9800ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+        var popup_e3a391658978775deae20d1fafc0fd6b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cd3d7e000f11d9f25b8df60d46117261 = $(`<div id="html_cd3d7e000f11d9f25b8df60d46117261" style="width: 100.0%; height: 100.0%;">KIPS BAY: -12.0% predicted growth</div>`)[0];
+                popup_e3a391658978775deae20d1fafc0fd6b.setContent(html_cd3d7e000f11d9f25b8df60d46117261);
+            
+        
+
+        circle_marker_f0c295ebe8efaeb1d069200eae480a4d.bindPopup(popup_e3a391658978775deae20d1fafc0fd6b)
+        ;
+
+        
+    
+    
+            circle_marker_f0c295ebe8efaeb1d069200eae480a4d.bindTooltip(
+                `<div>
+                     KIPS BAY
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e4e79c51b1c7198db36c9b8671456591 = L.circleMarker(
+                [40.72222494051103, -73.99548899514633],
+                {"bubblingMouseEvents": true, "color": "#ffc600ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffc600ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+        var popup_2827d16470dd4993aa6cd7e3cb179e89 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_87fe3942238a0f6f5f7a5014465137b2 = $(`<div id="html_87fe3942238a0f6f5f7a5014465137b2" style="width: 100.0%; height: 100.0%;">LITTLE ITALY: 13.5% predicted growth</div>`)[0];
+                popup_2827d16470dd4993aa6cd7e3cb179e89.setContent(html_87fe3942238a0f6f5f7a5014465137b2);
+            
+        
+
+        circle_marker_e4e79c51b1c7198db36c9b8671456591.bindPopup(popup_2827d16470dd4993aa6cd7e3cb179e89)
+        ;
+
+        
+    
+    
+            circle_marker_e4e79c51b1c7198db36c9b8671456591.bindTooltip(
+                `<div>
+                     LITTLE ITALY
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8c22c31bad0dc67415797a56576b09c0 = L.circleMarker(
+                [40.71573224561589, -73.986896274614],
+                {"bubblingMouseEvents": true, "color": "#aad500ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#aad500ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+        var popup_3c2443762d214ca12eede60584d5378d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a96523a7887435ebc0ce8fe009a44ca2 = $(`<div id="html_a96523a7887435ebc0ce8fe009a44ca2" style="width: 100.0%; height: 100.0%;">LOWER EAST SIDE: -3.5% predicted growth</div>`)[0];
+                popup_3c2443762d214ca12eede60584d5378d.setContent(html_a96523a7887435ebc0ce8fe009a44ca2);
+            
+        
+
+        circle_marker_8c22c31bad0dc67415797a56576b09c0.bindPopup(popup_3c2443762d214ca12eede60584d5378d)
+        ;
+
+        
+    
+    
+            circle_marker_8c22c31bad0dc67415797a56576b09c0.bindTooltip(
+                `<div>
+                     LOWER EAST SIDE
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a3018856bc259d995170069c8ab9cb42 = L.circleMarker(
+                [40.79650581649441, -73.96164131035015],
+                {"bubblingMouseEvents": true, "color": "#fff800ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fff800ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+        var popup_8d37e62aa8332c85d0f93e4d8ccdc09c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_20fc8609761e275f8e8c9aa701f5464b = $(`<div id="html_20fc8609761e275f8e8c9aa701f5464b" style="width: 100.0%; height: 100.0%;">MANHATTAN VALLEY: 3.8% predicted growth</div>`)[0];
+                popup_8d37e62aa8332c85d0f93e4d8ccdc09c.setContent(html_20fc8609761e275f8e8c9aa701f5464b);
+            
+        
+
+        circle_marker_a3018856bc259d995170069c8ab9cb42.bindPopup(popup_8d37e62aa8332c85d0f93e4d8ccdc09c)
+        ;
+
+        
+    
+    
+            circle_marker_a3018856bc259d995170069c8ab9cb42.bindTooltip(
+                `<div>
+                     MANHATTAN VALLEY
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_adbfe2a8b250fa222f1d5385fc4e0cef = L.circleMarker(
+                [40.75959026852614, -73.97173341039698],
+                {"bubblingMouseEvents": true, "color": "#ff6b00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6b00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+        var popup_a443fb5c1771005b9d238e21a534c641 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a724ea216cb47104a37af59b704976b4 = $(`<div id="html_a724ea216cb47104a37af59b704976b4" style="width: 100.0%; height: 100.0%;">MIDTOWN CBD: 26.2% predicted growth</div>`)[0];
+                popup_a443fb5c1771005b9d238e21a534c641.setContent(html_a724ea216cb47104a37af59b704976b4);
+            
+        
+
+        circle_marker_adbfe2a8b250fa222f1d5385fc4e0cef.bindPopup(popup_a443fb5c1771005b9d238e21a534c641)
+        ;
+
+        
+    
+    
+            circle_marker_adbfe2a8b250fa222f1d5385fc4e0cef.bindTooltip(
+                `<div>
+                     MIDTOWN CBD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5fdd7b902f27a65012054ef5ee9759cd = L.circleMarker(
+                [40.75512586469537, -73.9669182857186],
+                {"bubblingMouseEvents": true, "color": "#ffe800ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffe800ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+        var popup_a2dcde87c5ecdae9569783ddeb08c5ae = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a720c7a0e7950ba1c283404a0ab0054e = $(`<div id="html_a720c7a0e7950ba1c283404a0ab0054e" style="width: 100.0%; height: 100.0%;">MIDTOWN EAST: 7.0% predicted growth</div>`)[0];
+                popup_a2dcde87c5ecdae9569783ddeb08c5ae.setContent(html_a720c7a0e7950ba1c283404a0ab0054e);
+            
+        
+
+        circle_marker_5fdd7b902f27a65012054ef5ee9759cd.bindPopup(popup_a2dcde87c5ecdae9569783ddeb08c5ae)
+        ;
+
+        
+    
+    
+            circle_marker_5fdd7b902f27a65012054ef5ee9759cd.bindTooltip(
+                `<div>
+                     MIDTOWN EAST
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fddab29e402a7994fbd22990f95dd965 = L.circleMarker(
+                [40.76366589907803, -73.98264223089575],
+                {"bubblingMouseEvents": true, "color": "#fff200ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fff200ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+        var popup_a4b8b323cf830bd80c7a381b8d6cf548 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d446086bc8be8628a001270f5171d38f = $(`<div id="html_d446086bc8be8628a001270f5171d38f" style="width: 100.0%; height: 100.0%;">MIDTOWN WEST: 5.1% predicted growth</div>`)[0];
+                popup_a4b8b323cf830bd80c7a381b8d6cf548.setContent(html_d446086bc8be8628a001270f5171d38f);
+            
+        
+
+        circle_marker_fddab29e402a7994fbd22990f95dd965.bindPopup(popup_a4b8b323cf830bd80c7a381b8d6cf548)
+        ;
+
+        
+    
+    
+            circle_marker_fddab29e402a7994fbd22990f95dd965.bindTooltip(
+                `<div>
+                     MIDTOWN WEST
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7432677c158fb2892d2731468cf29db6 = L.circleMarker(
+                [40.812281181046345, -73.95936611782514],
+                {"bubblingMouseEvents": true, "color": "#fffb00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fffb00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+        var popup_abca16e6bfcc070394ec3c53f0e6922f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b9144948fcb8bff34f9365738766bdb2 = $(`<div id="html_b9144948fcb8bff34f9365738766bdb2" style="width: 100.0%; height: 100.0%;">MORNINGSIDE HEIGHTS: 3.2% predicted growth</div>`)[0];
+                popup_abca16e6bfcc070394ec3c53f0e6922f.setContent(html_b9144948fcb8bff34f9365738766bdb2);
+            
+        
+
+        circle_marker_7432677c158fb2892d2731468cf29db6.bindPopup(popup_abca16e6bfcc070394ec3c53f0e6922f)
+        ;
+
+        
+    
+    
+            circle_marker_7432677c158fb2892d2731468cf29db6.bindTooltip(
+                `<div>
+                     MORNINGSIDE HEIGHTS
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9fcab9ce3474b5643d28ffb888f6c49f = L.circleMarker(
+                [40.74683060996586, -73.98044592208264],
+                {"bubblingMouseEvents": true, "color": "#47a400ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#47a400ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+        var popup_90f26a49fcba9bd0ba22949899e88519 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_77d22a538c8ba730b9dc0988aebb5d8a = $(`<div id="html_77d22a538c8ba730b9dc0988aebb5d8a" style="width: 100.0%; height: 100.0%;">MURRAY HILL: -10.3% predicted growth</div>`)[0];
+                popup_90f26a49fcba9bd0ba22949899e88519.setContent(html_77d22a538c8ba730b9dc0988aebb5d8a);
+            
+        
+
+        circle_marker_9fcab9ce3474b5643d28ffb888f6c49f.bindPopup(popup_90f26a49fcba9bd0ba22949899e88519)
+        ;
+
+        
+    
+    
+            circle_marker_9fcab9ce3474b5643d28ffb888f6c49f.bindTooltip(
+                `<div>
+                     MURRAY HILL
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6d4988faddccc4e3982e11aff55708a7 = L.circleMarker(
+                [40.761973617019386, -73.94988700435586],
+                {"bubblingMouseEvents": true, "color": "#ffe100ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffe100ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+        var popup_fbd0519fe899c7419b609d8b57e57d91 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9b0ba73b9d88c46e084b517546d1eb9e = $(`<div id="html_9b0ba73b9d88c46e084b517546d1eb9e" style="width: 100.0%; height: 100.0%;">ROOSEVELT ISLAND: 8.3% predicted growth</div>`)[0];
+                popup_fbd0519fe899c7419b609d8b57e57d91.setContent(html_9b0ba73b9d88c46e084b517546d1eb9e);
+            
+        
+
+        circle_marker_6d4988faddccc4e3982e11aff55708a7.bindPopup(popup_fbd0519fe899c7419b609d8b57e57d91)
+        ;
+
+        
+    
+    
+            circle_marker_6d4988faddccc4e3982e11aff55708a7.bindTooltip(
+                `<div>
+                     ROOSEVELT ISLAND
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_571bfda0e73e3d4b47f6d5ffa1c131f5 = L.circleMarker(
+                [40.72470461711236, -74.00352102189844],
+                {"bubblingMouseEvents": true, "color": "#008000ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#008000ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+        var popup_759672b9da15eb960dda27add84bc6cb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c5d83552d915b82960e56870475a283a = $(`<div id="html_c5d83552d915b82960e56870475a283a" style="width: 100.0%; height: 100.0%;">SOHO: -15.3% predicted growth</div>`)[0];
+                popup_759672b9da15eb960dda27add84bc6cb.setContent(html_c5d83552d915b82960e56870475a283a);
+            
+        
+
+        circle_marker_571bfda0e73e3d4b47f6d5ffa1c131f5.bindPopup(popup_759672b9da15eb960dda27add84bc6cb)
+        ;
+
+        
+    
+    
+            circle_marker_571bfda0e73e3d4b47f6d5ffa1c131f5.bindTooltip(
+                `<div>
+                     SOHO
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_61c496924ce326b4d3abea291f46d8a0 = L.circleMarker(
+                [40.7097618017885, -74.00523514307692],
+                {"bubblingMouseEvents": true, "color": "#ff5f00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff5f00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+        var popup_d816335d15ada6fe30c4929e4a8322d9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ac88d43819f4ea075eab1dc40df91dfa = $(`<div id="html_ac88d43819f4ea075eab1dc40df91dfa" style="width: 100.0%; height: 100.0%;">SOUTHBRIDGE: 27.4% predicted growth</div>`)[0];
+                popup_d816335d15ada6fe30c4929e4a8322d9.setContent(html_ac88d43819f4ea075eab1dc40df91dfa);
+            
+        
+
+        circle_marker_61c496924ce326b4d3abea291f46d8a0.bindPopup(popup_d816335d15ada6fe30c4929e4a8322d9)
+        ;
+
+        
+    
+    
+            circle_marker_61c496924ce326b4d3abea291f46d8a0.bindTooltip(
+                `<div>
+                     SOUTHBRIDGE
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d2559770158e6e010e026874b937be90 = L.circleMarker(
+                [40.71469016468798, -74.01302339469095],
+                {"bubblingMouseEvents": true, "color": "#f5fb00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f5fb00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+        var popup_e46f0e70331b53a2f9c0ff1bf98e3b2b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_81d1878acec61eb540ec3cc628c1b3f0 = $(`<div id="html_81d1878acec61eb540ec3cc628c1b3f0" style="width: 100.0%; height: 100.0%;">TRIBECA: 1.7% predicted growth</div>`)[0];
+                popup_e46f0e70331b53a2f9c0ff1bf98e3b2b.setContent(html_81d1878acec61eb540ec3cc628c1b3f0);
+            
+        
+
+        circle_marker_d2559770158e6e010e026874b937be90.bindPopup(popup_e46f0e70331b53a2f9c0ff1bf98e3b2b)
+        ;
+
+        
+    
+    
+            circle_marker_d2559770158e6e010e026874b937be90.bindTooltip(
+                `<div>
+                     TRIBECA
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9d326f80c7c39f611f2c8d9fec66e49a = L.circleMarker(
+                [40.76816319909553, -73.96044295757223],
+                {"bubblingMouseEvents": true, "color": "#ffff00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+        var popup_910613716a54b310fde38c9ed7fd3b4d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9b2495f7ed404a4758dc1d74e925f4dd = $(`<div id="html_9b2495f7ed404a4758dc1d74e925f4dd" style="width: 100.0%; height: 100.0%;">UPPER EAST SIDE (59-79): 2.3% predicted growth</div>`)[0];
+                popup_910613716a54b310fde38c9ed7fd3b4d.setContent(html_9b2495f7ed404a4758dc1d74e925f4dd);
+            
+        
+
+        circle_marker_9d326f80c7c39f611f2c8d9fec66e49a.bindPopup(popup_910613716a54b310fde38c9ed7fd3b4d)
+        ;
+
+        
+    
+    
+            circle_marker_9d326f80c7c39f611f2c8d9fec66e49a.bindTooltip(
+                `<div>
+                     UPPER EAST SIDE (59-79)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3c8979e98975a65982dbaa821af78b8e = L.circleMarker(
+                [40.778497834309036, -73.95279015924639],
+                {"bubblingMouseEvents": true, "color": "#eff700ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff700ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+        var popup_60a3d8e357bc2a0b593de9e85c7aa369 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_013737730010d65a1cea8597d5007e39 = $(`<div id="html_013737730010d65a1cea8597d5007e39" style="width: 100.0%; height: 100.0%;">UPPER EAST SIDE (79-96): 1.2% predicted growth</div>`)[0];
+                popup_60a3d8e357bc2a0b593de9e85c7aa369.setContent(html_013737730010d65a1cea8597d5007e39);
+            
+        
+
+        circle_marker_3c8979e98975a65982dbaa821af78b8e.bindPopup(popup_60a3d8e357bc2a0b593de9e85c7aa369)
+        ;
+
+        
+    
+    
+            circle_marker_3c8979e98975a65982dbaa821af78b8e.bindTooltip(
+                `<div>
+                     UPPER EAST SIDE (79-96)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2056b5abc6a9027b4cb160e8eb8c93d6 = L.circleMarker(
+                [40.79134105248047, -73.95274144771108],
+                {"bubblingMouseEvents": true, "color": "#ffff00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+        var popup_ccdf4e5e2dddb1b4154db30ff429993e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c17542900221733f56cb9ca6b3d370d7 = $(`<div id="html_c17542900221733f56cb9ca6b3d370d7" style="width: 100.0%; height: 100.0%;">UPPER EAST SIDE (96-110): 2.4% predicted growth</div>`)[0];
+                popup_ccdf4e5e2dddb1b4154db30ff429993e.setContent(html_c17542900221733f56cb9ca6b3d370d7);
+            
+        
+
+        circle_marker_2056b5abc6a9027b4cb160e8eb8c93d6.bindPopup(popup_ccdf4e5e2dddb1b4154db30ff429993e)
+        ;
+
+        
+    
+    
+            circle_marker_2056b5abc6a9027b4cb160e8eb8c93d6.bindTooltip(
+                `<div>
+                     UPPER EAST SIDE (96-110)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c24e57a6646a80291e71bdf65f5c1c9c = L.circleMarker(
+                [40.77676714285318, -73.98266661236588],
+                {"bubblingMouseEvents": true, "color": "#ffeb00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffeb00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+        var popup_51f84b72c9276aaa8a5c09d712f2de48 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d578095a01c6bf14bae3fc8b58b5b07b = $(`<div id="html_d578095a01c6bf14bae3fc8b58b5b07b" style="width: 100.0%; height: 100.0%;">UPPER WEST SIDE (59-79): 6.4% predicted growth</div>`)[0];
+                popup_51f84b72c9276aaa8a5c09d712f2de48.setContent(html_d578095a01c6bf14bae3fc8b58b5b07b);
+            
+        
+
+        circle_marker_c24e57a6646a80291e71bdf65f5c1c9c.bindPopup(popup_51f84b72c9276aaa8a5c09d712f2de48)
+        ;
+
+        
+    
+    
+            circle_marker_c24e57a6646a80291e71bdf65f5c1c9c.bindTooltip(
+                `<div>
+                     UPPER WEST SIDE (59-79)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_24e23b6aabf711e390299115dc9d8996 = L.circleMarker(
+                [40.788823416022375, -73.97421773349939],
+                {"bubblingMouseEvents": true, "color": "#f2f900ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f2f900ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+        var popup_b2c5ac5bfdef8d95c4730f3c17924485 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1fbb8d77f747829f736b372b29889f4d = $(`<div id="html_1fbb8d77f747829f736b372b29889f4d" style="width: 100.0%; height: 100.0%;">UPPER WEST SIDE (79-96): 1.5% predicted growth</div>`)[0];
+                popup_b2c5ac5bfdef8d95c4730f3c17924485.setContent(html_1fbb8d77f747829f736b372b29889f4d);
+            
+        
+
+        circle_marker_24e23b6aabf711e390299115dc9d8996.bindPopup(popup_b2c5ac5bfdef8d95c4730f3c17924485)
+        ;
+
+        
+    
+    
+            circle_marker_24e23b6aabf711e390299115dc9d8996.bindTooltip(
+                `<div>
+                     UPPER WEST SIDE (79-96)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9841d8281c05c66778c861066f0e6fb9 = L.circleMarker(
+                [40.80004702501343, -73.96905837146902],
+                {"bubblingMouseEvents": true, "color": "#fff100ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fff100ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+        var popup_3b013be057f9dd45a6d28c3ab990e859 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1a2423609cd7787bb1062b58f301e51b = $(`<div id="html_1a2423609cd7787bb1062b58f301e51b" style="width: 100.0%; height: 100.0%;">UPPER WEST SIDE (96-116): 5.3% predicted growth</div>`)[0];
+                popup_3b013be057f9dd45a6d28c3ab990e859.setContent(html_1a2423609cd7787bb1062b58f301e51b);
+            
+        
+
+        circle_marker_9841d8281c05c66778c861066f0e6fb9.bindPopup(popup_3b013be057f9dd45a6d28c3ab990e859)
+        ;
+
+        
+    
+    
+            circle_marker_9841d8281c05c66778c861066f0e6fb9.bindTooltip(
+                `<div>
+                     UPPER WEST SIDE (96-116)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7c380e587c3bd62d134a0cce84854f13 = L.circleMarker(
+                [40.835846461127765, -73.9442096350398],
+                {"bubblingMouseEvents": true, "color": "#fff600ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fff600ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+        var popup_4690321dc443a252e38e924d0b8d9c88 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2010a6b3bf08ed5868fdce69891dca45 = $(`<div id="html_2010a6b3bf08ed5868fdce69891dca45" style="width: 100.0%; height: 100.0%;">WASHINGTON HEIGHTS LOWER: 4.2% predicted growth</div>`)[0];
+                popup_4690321dc443a252e38e924d0b8d9c88.setContent(html_2010a6b3bf08ed5868fdce69891dca45);
+            
+        
+
+        circle_marker_7c380e587c3bd62d134a0cce84854f13.bindPopup(popup_4690321dc443a252e38e924d0b8d9c88)
+        ;
+
+        
+    
+    
+            circle_marker_7c380e587c3bd62d134a0cce84854f13.bindTooltip(
+                `<div>
+                     WASHINGTON HEIGHTS LOWER
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a7e3a6c742634330e7f801f5e05da915 = L.circleMarker(
+                [40.85514627275658, -73.93601353435946],
+                {"bubblingMouseEvents": true, "color": "#fdfe00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fdfe00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+        
+    
+        var popup_fd3a76002b3a9f7354890e2eba273325 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0b6c7fa37670d087a1f94f0ada585acd = $(`<div id="html_0b6c7fa37670d087a1f94f0ada585acd" style="width: 100.0%; height: 100.0%;">WASHINGTON HEIGHTS UPPER: 2.2% predicted growth</div>`)[0];
+                popup_fd3a76002b3a9f7354890e2eba273325.setContent(html_0b6c7fa37670d087a1f94f0ada585acd);
+            
+        
+
+        circle_marker_a7e3a6c742634330e7f801f5e05da915.bindPopup(popup_fd3a76002b3a9f7354890e2eba273325)
+        ;
+
+        
+    
+    
+            circle_marker_a7e3a6c742634330e7f801f5e05da915.bindTooltip(
+                `<div>
+                     WASHINGTON HEIGHTS UPPER
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+    var color_map_93604edddf429700bdfc393ae72a3c38 = {};
+
+    
+    color_map_93604edddf429700bdfc393ae72a3c38.color = d3.scale.threshold()
+              .domain([-0.15254508347256282, -0.1514853733270065, -0.1504256631814502, -0.1493659530358939, -0.1483062428903376, -0.14724653274478128, -0.14618682259922497, -0.14512711245366866, -0.14406740230811235, -0.14300769216255604, -0.1419479820169997, -0.1408882718714434, -0.1398285617258871, -0.13876885158033078, -0.13770914143477447, -0.13664943128921817, -0.13558972114366186, -0.13453001099810555, -0.13347030085254924, -0.13241059070699293, -0.13135088056143662, -0.13029117041588031, -0.129231460270324, -0.1281717501247677, -0.1271120399792114, -0.12605232983365508, -0.12499261968809876, -0.12393290954254245, -0.12287319939698614, -0.12181348925142983, -0.12075377910587351, -0.1196940689603172, -0.11863435881476089, -0.11757464866920458, -0.11651493852364828, -0.11545522837809197, -0.11439551823253566, -0.11333580808697935, -0.11227609794142304, -0.11121638779586673, -0.11015667765031043, -0.1090969675047541, -0.1080372573591978, -0.10697754721364149, -0.10591783706808516, -0.10485812692252887, -0.10379841677697255, -0.10273870663141624, -0.10167899648585993, -0.10061928634030362, -0.09955957619474731, -0.098499866049191, -0.0974401559036347, -0.09638044575807839, -0.09532073561252208, -0.09426102546696577, -0.09320131532140946, -0.09214160517585314, -0.09108189503029684, -0.09002218488474052, -0.08896247473918421, -0.08790276459362789, -0.0868430544480716, -0.08578334430251529, -0.08472363415695898, -0.08366392401140266, -0.08260421386584635, -0.08154450372029005, -0.08048479357473373, -0.07942508342917742, -0.07836537328362111, -0.07730566313806479, -0.0762459529925085, -0.07518624284695219, -0.07412653270139588, -0.07306682255583956, -0.07200711241028325, -0.07094740226472694, -0.06988769211917063, -0.06882798197361432, -0.06776827182805802, -0.0667085616825017, -0.06564885153694539, -0.06458914139138909, -0.06352943124583277, -0.06246972110027646, -0.06141001095472015, -0.06035030080916384, -0.05929059066360752, -0.058230880518051226, -0.05717117037249492, -0.056111460226938595, -0.055051750081382286, -0.05399203993582598, -0.05293232979026967, -0.05187261964471336, -0.05081290949915705, -0.049753199353600744, -0.04869348920804442, -0.04763377906248813, -0.04657406891693182, -0.045514358771375496, -0.04445464862581919, -0.04339493848026288, -0.04233522833470657, -0.04127551818915026, -0.040215808043593954, -0.03915609789803763, -0.03809638775248132, -0.037036677606925014, -0.03597696746136872, -0.0349172573158124, -0.03385754717025609, -0.03279783702469978, -0.03173812687914346, -0.030678416733587163, -0.029618706588030855, -0.028558996442474532, -0.027499286296918224, -0.026439576151361915, -0.025379866005805607, -0.0243201558602493, -0.023260445714692962, -0.02220073556913668, -0.021141025423580373, -0.020081315278024064, -0.019021605132467756, -0.01796189498691142, -0.01690218484135514, -0.01584247469579883, -0.014782764550242494, -0.013723054404686214, -0.012663344259129877, -0.011603634113573569, -0.010543923968017288, -0.009484213822460952, -0.008424503676904643, -0.007364793531348335, -0.006305083385792026, -0.005245373240235718, -0.004185663094679409, -0.003125952949123101, -0.0020662428035667646, -0.0010065326580104839, 5.317748754582463e-05, 0.0011128876331021609, 0.0021725977786584416, 0.003232307924214778, 0.004292018069771059, 0.005351728215327395, 0.006411438360883703, 0.007471148506439984, 0.00853085865199632, 0.009590568797552629, 0.010650278943108937, 0.011709989088665246, 0.012769699234221554, 0.013829409379777863, 0.014889119525334171, 0.015948829670890508, 0.017008539816446788, 0.018068249962003097, 0.019127960107559433, 0.020187670253115714, 0.02124738039867205, 0.02230709054422836, 0.02336680068978464, 0.024426510835340975, 0.025486220980897284, 0.026545931126453592, 0.0276056412720099, 0.02866535141756618, 0.029725061563122518, 0.030784771708678826, 0.031844481854235135, 0.03290419199979144, 0.03396390214534778, 0.03502361229090406, 0.03608332243646037, 0.037143032582016705, 0.038202742727572986, 0.03926245287312932, 0.04032216301868563, 0.04138187316424191, 0.04244158330979825, 0.043501293455354556, 0.044561003600910865, 0.04562071374646717, 0.04668042389202348, 0.04774013403757979, 0.0487998441831361, 0.049859554328692435, 0.050919264474248715, 0.051978974619805024, 0.05303868476536133, 0.05409839491091764, 0.05515810505647398, 0.05621781520203026, 0.057277525347586566, 0.0583372354931429, 0.05939694563869918, 0.06045665578425552, 0.06151636592981183, 0.06257607607536811, 0.06363578622092445, 0.06469549636648075, 0.06575520651203706, 0.06681491665759337, 0.06787462680314968, 0.06893433694870599, 0.0699940470942623, 0.07105375723981863, 0.07211346738537491, 0.07317317753093125, 0.07423288767648756, 0.07529259782204384, 0.07635230796760017, 0.07741201811315646, 0.07847172825871279, 0.0795314384042691, 0.08059114854982538, 0.08165085869538172, 0.08271056884093803, 0.08377027898649433, 0.08482998913205064, 0.08588969927760695, 0.08694940942316326, 0.08800911956871957, 0.0890688297142759, 0.09012853985983219, 0.0911882500053885, 0.09224796015094483, 0.09330767029650111, 0.09436738044205745, 0.09542709058761376, 0.09648680073317004, 0.09754651087872637, 0.09860622102428265, 0.09966593116983899, 0.10072564131539527, 0.1017853514609516, 0.10284506160650794, 0.10390477175206422, 0.1049644818976205, 0.1060241920431769, 0.10708390218873318, 0.10814361233428946, 0.1092033224798458, 0.11026303262540207, 0.11132274277095841, 0.11238245291651469, 0.11344216306207103, 0.11450187320762731, 0.11556158335318359, 0.11662129349873998, 0.11768100364429626, 0.11874071378985254, 0.11980042393540888, 0.12086013408096516, 0.1219198442265215, 0.12297955437207783, 0.12403926451763411, 0.1250989746631904, 0.12615868480874673, 0.12721839495430307, 0.12827810509985935, 0.12933781524541568, 0.13039752539097196, 0.13145723553652824, 0.13251694568208464, 0.13357665582764092, 0.1346363659731972, 0.13569607611875353, 0.13675578626430981, 0.13781549640986615, 0.1388752065554225, 0.13993491670097877, 0.14099462684653505, 0.14205433699209138, 0.14311404713764772, 0.144173757283204, 0.14523346742876034, 0.14629317757431662, 0.1473528877198729, 0.1484125978654293, 0.14947230801098557, 0.15053201815654185, 0.1515917283020982, 0.15265143844765447, 0.1537111485932108, 0.15477085873876714, 0.15583056888432342, 0.1568902790298797, 0.1579499891754361, 0.15900969932099238, 0.16006940946654866, 0.16112911961210494, 0.16218882975766127, 0.1632485399032176, 0.1643082500487739, 0.16536796019433023, 0.1664276703398865, 0.1674873804854428, 0.16854709063099918, 0.16960680077655546, 0.17066651092211174, 0.17172622106766808, 0.17278593121322436, 0.1738456413587807, 0.17490535150433703, 0.1759650616498933, 0.1770247717954496, 0.17808448194100593, 0.17914419208656227, 0.18020390223211855, 0.18126361237767488, 0.18232332252323116, 0.18338303266878744, 0.18444274281434384, 0.18550245295990012, 0.1865621631054564, 0.18762187325101273, 0.188681583396569, 0.18974129354212535, 0.1908010036876817, 0.19186071383323797, 0.19292042397879425, 0.19398013412435058, 0.19503984426990692, 0.1960995544154632, 0.19715926456101954, 0.19821897470657582, 0.1992786848521321, 0.2003383949976885, 0.20139810514324477, 0.20245781528880105, 0.2035175254343574, 0.20457723557991367, 0.20563694572547, 0.20669665587102629, 0.20775636601658262, 0.2088160761621389, 0.20987578630769518, 0.21093549645325158, 0.21199520659880786, 0.21305491674436414, 0.21411462688992047, 0.21517433703547675, 0.2162340471810331, 0.21729375732658943, 0.2183534674721457, 0.219413177617702, 0.22047288776325838, 0.22153259790881466, 0.22259230805437094, 0.22365201819992728, 0.22471172834548356, 0.2257714384910399, 0.22683114863659623, 0.2278908587821525, 0.2289505689277088, 0.23001027907326513, 0.23106998921882146, 0.23212969936437775, 0.23318940950993408, 0.23424911965549036, 0.23530882980104664, 0.23636853994660303, 0.23742825009215932, 0.2384879602377156, 0.23954767038327193, 0.2406073805288282, 0.24166709067438455, 0.24272680081994089, 0.24378651096549717, 0.24484622111105345, 0.24590593125660978, 0.24696564140216612, 0.2480253515477224, 0.24908506169327874, 0.250144771838835, 0.25120448198439127, 0.25226419212994766, 0.25332390227550394, 0.2543836124210602, 0.2554433225666165, 0.2565030327121729, 0.2575627428577292, 0.25862245300328546, 0.25968216314884185, 0.26074187329439813, 0.2618015834399544, 0.2628612935855108, 0.2639210037310671, 0.26498071387662336, 0.26604042402217964, 0.2671001341677359, 0.2681598443132923, 0.2692195544588486, 0.2702792646044049, 0.27133897474996116, 0.27239868489551755, 0.27345839504107383, 0.2745181051866301, 0.2755778153321865, 0.2766375254777428, 0.27769723562329907, 0.27875694576885546, 0.27981665591441174, 0.280876366059968, 0.2819360762055243, 0.2829957863510806, 0.28405549649663697, 0.28511520664219325, 0.28617491678774953, 0.2872346269333058, 0.2882943370788622, 0.2893540472244185, 0.29041375736997477, 0.29147346751553116, 0.29253317766108744, 0.2935928878066437, 0.2946525979522001, 0.2957123080977564, 0.2967720182433127, 0.29783172838886895, 0.29889143853442535, 0.2999511486799816, 0.3010108588255379, 0.3020705689710942, 0.30313027911665047, 0.30418998926220686, 0.30524969940776314, 0.3063094095533194, 0.3073691196988757, 0.3084288298444321, 0.3094885399899884, 0.31054825013554466, 0.31160796028110105, 0.31266767042665733, 0.3137273805722136, 0.31478709071777, 0.3158468008633263, 0.31690651100888256, 0.31796622115443884, 0.3190259312999951, 0.3200856414455515, 0.3211453515911078, 0.3222050617366641, 0.32326477188222036, 0.32432448202777675, 0.32538419217333303, 0.3264439023188893, 0.3275036124644457, 0.328563322610002, 0.32962303275555827, 0.33068274290111466, 0.33174245304667094, 0.3328021631922272, 0.3338618733377835, 0.3349215834833398, 0.33598129362889617, 0.33704100377445245, 0.33810071392000873, 0.339160424065565, 0.3402201342111214, 0.3412798443566777, 0.34233955450223397, 0.34339926464779036, 0.34445897479334664, 0.3455186849389029, 0.3465783950844593, 0.3476381052300156, 0.3486978153755719, 0.34975752552112815, 0.35081723566668443, 0.3518769458122408, 0.3529366559577971, 0.3539963661033534, 0.3550560762489098, 0.35611578639446606, 0.35717549654002234, 0.35823520668557873, 0.359294916831135, 0.3603546269766913, 0.3614143371222476, 0.36247404726780386, 0.36353375741336014, 0.36459346755891664, 0.3656531777044729, 0.3667128878500292, 0.3677725979955855, 0.36883230814114176, 0.36989201828669804, 0.37095172843225444, 0.3720114385778107, 0.373071148723367, 0.3741308588689233, 0.37519056901447967, 0.37625027916003595])
+              .range(['#008000ff', '#018100ff', '#038200ff', '#048200ff', '#068300ff', '#078400ff', '#098500ff', '#0a8500ff', '#0c8600ff', '#0d8700ff', '#0f8800ff', '#108800ff', '#128900ff', '#148a00ff', '#158b00ff', '#178b00ff', '#188c00ff', '#1a8d00ff', '#1b8e00ff', '#1d8f00ff', '#1e8f00ff', '#209000ff', '#219100ff', '#239200ff', '#249200ff', '#269300ff', '#289400ff', '#299500ff', '#2b9500ff', '#2c9600ff', '#2e9700ff', '#2f9800ff', '#319900ff', '#329900ff', '#349a00ff', '#359b00ff', '#379c00ff', '#389c00ff', '#3a9d00ff', '#3c9e00ff', '#3d9f00ff', '#3f9f00ff', '#40a000ff', '#42a100ff', '#43a200ff', '#45a200ff', '#46a300ff', '#48a400ff', '#49a500ff', '#4ba600ff', '#4ca600ff', '#4ea700ff', '#50a800ff', '#51a900ff', '#53a900ff', '#54aa00ff', '#56ab00ff', '#57ac00ff', '#59ac00ff', '#5aad00ff', '#5cae00ff', '#5daf00ff', '#5fb000ff', '#60b000ff', '#62b100ff', '#64b200ff', '#65b300ff', '#67b300ff', '#68b400ff', '#6ab500ff', '#6bb600ff', '#6db600ff', '#6eb700ff', '#70b800ff', '#71b900ff', '#73b900ff', '#74ba00ff', '#76bb00ff', '#78bc00ff', '#79bd00ff', '#7bbd00ff', '#7cbe00ff', '#7ebf00ff', '#7fc000ff', '#81c000ff', '#82c100ff', '#84c200ff', '#85c300ff', '#87c300ff', '#88c400ff', '#8ac500ff', '#8cc600ff', '#8dc700ff', '#8fc700ff', '#90c800ff', '#92c900ff', '#93ca00ff', '#95ca00ff', '#96cb00ff', '#98cc00ff', '#99cd00ff', '#9bcd00ff', '#9cce00ff', '#9ecf00ff', '#a0d000ff', '#a1d000ff', '#a3d100ff', '#a4d200ff', '#a6d300ff', '#a7d400ff', '#a9d400ff', '#aad500ff', '#acd600ff', '#add700ff', '#afd700ff', '#b0d800ff', '#b2d900ff', '#b4da00ff', '#b5da00ff', '#b7db00ff', '#b8dc00ff', '#badd00ff', '#bbde00ff', '#bdde00ff', '#bedf00ff', '#c0e000ff', '#c1e100ff', '#c3e100ff', '#c5e200ff', '#c6e300ff', '#c8e400ff', '#c9e400ff', '#cbe500ff', '#cce600ff', '#cee700ff', '#cfe700ff', '#d1e800ff', '#d2e900ff', '#d4ea00ff', '#d5eb00ff', '#d7eb00ff', '#d9ec00ff', '#daed00ff', '#dcee00ff', '#ddee00ff', '#dfef00ff', '#e0f000ff', '#e2f100ff', '#e3f100ff', '#e5f200ff', '#e6f300ff', '#e8f400ff', '#e9f500ff', '#ebf500ff', '#edf600ff', '#eef700ff', '#f0f800ff', '#f1f800ff', '#f3f900ff', '#f4fa00ff', '#f6fb00ff', '#f7fb00ff', '#f9fc00ff', '#fafd00ff', '#fcfe00ff', '#fdfe00ff', '#ffff00ff', '#ffff00ff', '#ffff00ff', '#fffe00ff', '#fffe00ff', '#fffd00ff', '#fffc00ff', '#fffc00ff', '#fffb00ff', '#fffb00ff', '#fffa00ff', '#fffa00ff', '#fff900ff', '#fff900ff', '#fff800ff', '#fff800ff', '#fff700ff', '#fff600ff', '#fff600ff', '#fff500ff', '#fff500ff', '#fff400ff', '#fff400ff', '#fff300ff', '#fff300ff', '#fff200ff', '#fff200ff', '#fff100ff', '#fff000ff', '#fff000ff', '#ffef00ff', '#ffef00ff', '#ffee00ff', '#ffee00ff', '#ffed00ff', '#ffed00ff', '#ffec00ff', '#ffec00ff', '#ffeb00ff', '#ffea00ff', '#ffea00ff', '#ffe900ff', '#ffe900ff', '#ffe800ff', '#ffe800ff', '#ffe700ff', '#ffe700ff', '#ffe600ff', '#ffe600ff', '#ffe500ff', '#ffe500ff', '#ffe400ff', '#ffe300ff', '#ffe300ff', '#ffe200ff', '#ffe200ff', '#ffe100ff', '#ffe100ff', '#ffe000ff', '#ffe000ff', '#ffdf00ff', '#ffdf00ff', '#ffde00ff', '#ffdd00ff', '#ffdd00ff', '#ffdc00ff', '#ffdc00ff', '#ffdb00ff', '#ffdb00ff', '#ffda00ff', '#ffda00ff', '#ffd900ff', '#ffd900ff', '#ffd800ff', '#ffd700ff', '#ffd700ff', '#ffd600ff', '#ffd600ff', '#ffd500ff', '#ffd500ff', '#ffd400ff', '#ffd400ff', '#ffd300ff', '#ffd300ff', '#ffd200ff', '#ffd200ff', '#ffd100ff', '#ffd000ff', '#ffd000ff', '#ffcf00ff', '#ffcf00ff', '#ffce00ff', '#ffce00ff', '#ffcd00ff', '#ffcd00ff', '#ffcc00ff', '#ffcc00ff', '#ffcb00ff', '#ffca00ff', '#ffca00ff', '#ffc900ff', '#ffc900ff', '#ffc800ff', '#ffc800ff', '#ffc700ff', '#ffc700ff', '#ffc600ff', '#ffc600ff', '#ffc500ff', '#ffc400ff', '#ffc400ff', '#ffc300ff', '#ffc300ff', '#ffc200ff', '#ffc200ff', '#ffc100ff', '#ffc100ff', '#ffc000ff', '#ffc000ff', '#ffbf00ff', '#ffbe00ff', '#ffbe00ff', '#ffbd00ff', '#ffbd00ff', '#ffbc00ff', '#ffbc00ff', '#ffbb00ff', '#ffbb00ff', '#ffba00ff', '#ffba00ff', '#ffb900ff', '#ffb900ff', '#ffb800ff', '#ffb700ff', '#ffb700ff', '#ffb600ff', '#ffb600ff', '#ffb500ff', '#ffb500ff', '#ffb400ff', '#ffb400ff', '#ffb300ff', '#ffb300ff', '#ffb200ff', '#ffb100ff', '#ffb100ff', '#ffb000ff', '#ffb000ff', '#ffaf00ff', '#ffaf00ff', '#ffae00ff', '#ffae00ff', '#ffad00ff', '#ffad00ff', '#ffac00ff', '#ffab00ff', '#ffab00ff', '#ffaa00ff', '#ffaa00ff', '#ffa900ff', '#ffa900ff', '#ffa800ff', '#ffa800ff', '#ffa700ff', '#ffa700ff', '#ffa600ff', '#ffa600ff', '#ffa500ff', '#ffa400ff', '#ffa300ff', '#ffa200ff', '#ffa100ff', '#ffa000ff', '#ff9f00ff', '#ff9e00ff', '#ff9d00ff', '#ff9c00ff', '#ff9b00ff', '#ff9a00ff', '#ff9900ff', '#ff9800ff', '#ff9700ff', '#ff9600ff', '#ff9500ff', '#ff9400ff', '#ff9300ff', '#ff9200ff', '#ff9100ff', '#ff9000ff', '#ff8f00ff', '#ff8e00ff', '#ff8d00ff', '#ff8c00ff', '#ff8b00ff', '#ff8a00ff', '#ff8900ff', '#ff8800ff', '#ff8700ff', '#ff8600ff', '#ff8500ff', '#ff8400ff', '#ff8300ff', '#ff8200ff', '#ff8100ff', '#ff8000ff', '#ff7f00ff', '#ff7e00ff', '#ff7d00ff', '#ff7c00ff', '#ff7b00ff', '#ff7a00ff', '#ff7900ff', '#ff7800ff', '#ff7700ff', '#ff7600ff', '#ff7500ff', '#ff7400ff', '#ff7300ff', '#ff7200ff', '#ff7100ff', '#ff7000ff', '#ff6f00ff', '#ff6e00ff', '#ff6d00ff', '#ff6c00ff', '#ff6b00ff', '#ff6a00ff', '#ff6900ff', '#ff6800ff', '#ff6700ff', '#ff6600ff', '#ff6500ff', '#ff6400ff', '#ff6300ff', '#ff6200ff', '#ff6100ff', '#ff6000ff', '#ff5f00ff', '#ff5e00ff', '#ff5d00ff', '#ff5c00ff', '#ff5b00ff', '#ff5a00ff', '#ff5900ff', '#ff5800ff', '#ff5700ff', '#ff5600ff', '#ff5500ff', '#ff5400ff', '#ff5300ff', '#ff5200ff', '#ff5100ff', '#ff5000ff', '#ff4f00ff', '#ff4e00ff', '#ff4d00ff', '#ff4c00ff', '#ff4b00ff', '#ff4a00ff', '#ff4900ff', '#ff4800ff', '#ff4700ff', '#ff4600ff', '#ff4500ff', '#ff4400ff', '#ff4300ff', '#ff4200ff', '#ff4100ff', '#ff4000ff', '#ff3f00ff', '#ff3e00ff', '#ff3d00ff', '#ff3c00ff', '#ff3b00ff', '#ff3a00ff', '#ff3900ff', '#ff3800ff', '#ff3700ff', '#ff3600ff', '#ff3500ff', '#ff3400ff', '#ff3300ff', '#ff3200ff', '#ff3100ff', '#ff3000ff', '#ff2f00ff', '#ff2e00ff', '#ff2d00ff', '#ff2c00ff', '#ff2b00ff', '#ff2a00ff', '#ff2900ff', '#ff2800ff', '#ff2700ff', '#ff2600ff', '#ff2500ff', '#ff2400ff', '#ff2300ff', '#ff2200ff', '#ff2100ff', '#ff2000ff', '#ff1f00ff', '#ff1e00ff', '#ff1d00ff', '#ff1c00ff', '#ff1b00ff', '#ff1a00ff', '#ff1900ff', '#ff1800ff', '#ff1700ff', '#ff1600ff', '#ff1500ff', '#ff1400ff', '#ff1300ff', '#ff1200ff', '#ff1100ff', '#ff1000ff', '#ff0f00ff', '#ff0e00ff', '#ff0d00ff', '#ff0c00ff', '#ff0b00ff', '#ff0a00ff', '#ff0900ff', '#ff0800ff', '#ff0700ff', '#ff0600ff', '#ff0500ff', '#ff0400ff', '#ff0300ff', '#ff0200ff', '#ff0100ff', '#ff0000ff', '#ff0000ff']);
+    
+
+    color_map_93604edddf429700bdfc393ae72a3c38.x = d3.scale.linear()
+              .domain([-0.15254508347256282, 0.37625027916003595])
+              .range([0, 450 - 50]);
+
+    color_map_93604edddf429700bdfc393ae72a3c38.legend = L.control({position: 'topright'});
+    color_map_93604edddf429700bdfc393ae72a3c38.legend.onAdd = function (map) {var div = L.DomUtil.create('div', 'legend'); return div};
+    color_map_93604edddf429700bdfc393ae72a3c38.legend.addTo(map_16898c6cb73362994e06bdb3bb9ae0df);
+
+    color_map_93604edddf429700bdfc393ae72a3c38.xAxis = d3.svg.axis()
+        .scale(color_map_93604edddf429700bdfc393ae72a3c38.x)
+        .orient("top")
+        .tickSize(1)
+        .tickValues([-0.15254508347256282, 0.023720037404970085, 0.199985158282503, 0.37625027916003595]);
+
+    color_map_93604edddf429700bdfc393ae72a3c38.svg = d3.select(".legend.leaflet-control").append("svg")
+        .attr("id", 'legend')
+        .attr("width", 450)
+        .attr("height", 40);
+
+    color_map_93604edddf429700bdfc393ae72a3c38.g = color_map_93604edddf429700bdfc393ae72a3c38.svg.append("g")
+        .attr("class", "key")
+        .attr("fill", "black")
+        .attr("transform", "translate(25,16)");
+
+    color_map_93604edddf429700bdfc393ae72a3c38.g.selectAll("rect")
+        .data(color_map_93604edddf429700bdfc393ae72a3c38.color.range().map(function(d, i) {
+          return {
+            x0: i ? color_map_93604edddf429700bdfc393ae72a3c38.x(color_map_93604edddf429700bdfc393ae72a3c38.color.domain()[i - 1]) : color_map_93604edddf429700bdfc393ae72a3c38.x.range()[0],
+            x1: i < color_map_93604edddf429700bdfc393ae72a3c38.color.domain().length ? color_map_93604edddf429700bdfc393ae72a3c38.x(color_map_93604edddf429700bdfc393ae72a3c38.color.domain()[i]) : color_map_93604edddf429700bdfc393ae72a3c38.x.range()[1],
+            z: d
+          };
+        }))
+      .enter().append("rect")
+        .attr("height", 40 - 30)
+        .attr("x", function(d) { return d.x0; })
+        .attr("width", function(d) { return d.x1 - d.x0; })
+        .style("fill", function(d) { return d.z; });
+
+    color_map_93604edddf429700bdfc393ae72a3c38.g.call(color_map_93604edddf429700bdfc393ae72a3c38.xAxis).append("text")
+        .attr("class", "caption")
+        .attr("y", 21)
+        .attr("fill", "black")
+        .text("Predicted 3-Year Growth Rate (Gentrification Risk)");
+</script>
+</html>
