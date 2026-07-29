@@ -1,11 +1,3 @@
-"""
-Geocode unique sale addresses to lat/long using the free US Census Bureau
-Batch Geocoder (no API key required).
-
-Geocodes unique ADDRESS+ZIP_CODE combos only (not every sale row), since
-many rows share an address (repeat sales of the same building).
-"""
-
 import io
 import time
 
@@ -54,8 +46,6 @@ def _submit_chunk(chunk: pd.DataFrame, max_retries: int = 3) -> pd.DataFrame | N
 
 
 def geocode_addresses(unique_addrs: pd.DataFrame) -> pd.DataFrame:
-    """Submit in chunks of CENSUS_CHUNK_SIZE, dedupe any resubmitted chunks,
-    return one row per UNIQUE_ID with lat/long (NaN if unmatched)."""
     all_results = []
     n_chunks = (len(unique_addrs) // config.CENSUS_CHUNK_SIZE) + 1
 
