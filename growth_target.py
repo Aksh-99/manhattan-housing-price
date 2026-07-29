@@ -42,9 +42,6 @@ def _flag_price_spikes(neighborhood_year: pd.DataFrame) -> pd.Series:
  
  
 def build_growth_target(neighborhood_year: pd.DataFrame, forward_years: int = config.FORWARD_YEARS) -> pd.DataFrame:
-    """For each neighborhood-year, compute the % price change `forward_years`
-    ahead. Features (SALES_COUNT, PCT_CONDO, PRICE_SPIKE_YEAR) are carried
-    from the BASE year, since those are what would be known at prediction time."""
     pivot = neighborhood_year.pivot(index="NEIGHBORHOOD", columns="SALE_YEAR", values="MEDIAN_PRICE")
     ny_indexed = neighborhood_year.set_index(["NEIGHBORHOOD", "SALE_YEAR"])
  
@@ -75,9 +72,6 @@ def build_growth_target(neighborhood_year: pd.DataFrame, forward_years: int = co
  
 def add_price_momentum(growth_df: pd.DataFrame, neighborhood_year: pd.DataFrame,
                         window_years: int = config.MOMENTUM_WINDOW_YEARS) -> pd.DataFrame:
-    """Add trailing price momentum (% change over the `window_years` before
-    each BASE_YEAR) - a leading indicator of where a neighborhood was already
-    heading before the prediction window starts."""
     pivot = neighborhood_year.pivot(index="NEIGHBORHOOD", columns="SALE_YEAR", values="MEDIAN_PRICE")
  
     def _momentum(row):
@@ -95,20 +89,12 @@ def add_price_momentum(growth_df: pd.DataFrame, neighborhood_year: pd.DataFrame,
  
  
 def add_crisis_year_flag(growth_df: pd.DataFrame) -> pd.DataFrame:
-    """Flags whether BASE_YEAR falls in a known market-wide crisis period
-    (see config.CRISIS_YEARS). Gives the model at least two historical
-    examples of "this is a crisis year" as a general, learnable pattern,
-    rather than being blindsided by e.g. COVID as a complete unknown."""
     growth_df = growth_df.copy()
     growth_df["IS_CRISIS_YEAR"] = growth_df["BASE_YEAR"].isin(config.CRISIS_YEARS).astype(int)
     return growth_df
  
  
 def fetch_mortgage_rate_by_year() -> pd.DataFrame:
-    """Pull 30-year fixed mortgage rate history from FRED (free CSV endpoint,
-    no API key) and average to one value per calendar year. Rate environment
-    drives real-estate cycles market-wide - a feature the model otherwise has
-    zero visibility into."""
     import requests
  
     resp = requests.get(config.FRED_MORTGAGE_RATE_URL, timeout=30)
@@ -125,10 +111,6 @@ def fetch_mortgage_rate_by_year() -> pd.DataFrame:
  
  
 def add_log_target(model_df: pd.DataFrame, target_col: str) -> pd.DataFrame:
-    """Add a log-transformed version of the growth-rate target. Growth rate
-    is right-skewed (a handful of extreme spikes like a single new
-    development's launch year can otherwise dominate model training) -
-    log1p on the signed value stabilizes this while preserving direction."""
     import numpy as np
  
     model_df = model_df.copy()
@@ -137,8 +119,6 @@ def add_log_target(model_df: pd.DataFrame, target_col: str) -> pd.DataFrame:
  
  
 def aggregate_spatial_features(spatial_sales_path: str = config.SALES_WITH_SPATIAL_CSV) -> pd.DataFrame:
-    """Average each sale-level spatial feature up to neighborhood-year level,
-    so it can be joined onto the growth-rate target table."""
     spatial_df = pd.read_csv(spatial_sales_path, low_memory=False)
     spatial_df["NEIGHBORHOOD"] = spatial_df["NEIGHBORHOOD"].str.strip()
  
