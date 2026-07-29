@@ -1,23 +1,3 @@
-"""
-STEP 2 of 2: Pull Manhattan residential building permits from NYC DOB
-(free Socrata API), assign each permit to the nearest known neighborhood
-using the same nearest-centroid approach as spatial_features.py, and
-aggregate into a neighborhood-year permit-count feature - a genuine
-leading indicator, since new construction/major-renovation activity
-happening NOW plausibly precedes the price growth it's meant to predict,
-unlike static amenities (a subway stop doesn't move) or price momentum
-(a lagging, not leading, signal).
-
-Only NB (New Building) and A1 (major Alteration) job types are counted -
-see config.SIGNIFICANT_JOB_TYPES. A2/A3 cover minor work (a new
-bathroom, a boiler swap) that isn't a meaningful gentrification signal
-and would mostly add noise.
-
-Schema confirmed via explore_permit_schema.py before writing this -
-key fields: borough, issuance_date, gis_latitude, gis_longitude,
-job_type, residential, zip_code.
-"""
-
 import time
 
 import numpy as np
@@ -29,9 +9,6 @@ import config
 
 
 def fetch_manhattan_permits(force_refresh: bool = False) -> pd.DataFrame:
-    """Pull all Manhattan residential NB/A1 permits, paginated via
-    $limit/$offset (Socrata caps results per request, same pattern as the
-    Census batch geocoder)."""
     import os
 
     if not force_refresh and os.path.exists(config.DOB_PERMITS_CACHE):
@@ -72,9 +49,6 @@ def fetch_manhattan_permits(force_refresh: bool = False) -> pd.DataFrame:
 
 
 def assign_permits_to_neighborhoods(permits: pd.DataFrame, neighborhood_centroids: pd.DataFrame) -> pd.DataFrame:
-    """Assign each permit to its nearest neighborhood centroid (same
-    nearest-neighbor approach as spatial_features.py's amenity matching).
-    `neighborhood_centroids` must have columns: NEIGHBORHOOD, LAT, LON."""
     permits = permits.copy()
     permits["gis_latitude"] = pd.to_numeric(permits["gis_latitude"], errors="coerce")
     permits["gis_longitude"] = pd.to_numeric(permits["gis_longitude"], errors="coerce")
@@ -100,9 +74,6 @@ def aggregate_permits_by_neighborhood_year(permits_with_neighborhood: pd.DataFra
 
 
 def add_permit_feature(model_df: pd.DataFrame, permit_agg: pd.DataFrame) -> pd.DataFrame:
-    """Merge permit counts onto model_df; neighborhoods/years with zero
-    matched permits get PERMIT_COUNT=0 (a real zero, not missing data -
-    it means no significant construction was issued that year)."""
     merged = model_df.merge(permit_agg, on=["NEIGHBORHOOD", "BASE_YEAR"], how="left")
     merged["PERMIT_COUNT"] = merged["PERMIT_COUNT"].fillna(0).astype(int)
     return merged
