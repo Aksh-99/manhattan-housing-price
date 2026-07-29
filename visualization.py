@@ -1,11 +1,3 @@
-"""
-Visualizations for the Manhattan gentrification-risk project:
-  1. Citywide median price trend (matplotlib, static)
-  2. Interactive sales/amenities map (folium)
-  3. Final gentrification-risk map - predicted growth rate by neighborhood,
-     colored on a legend scale (folium + branca colormap)
-"""
-
 import matplotlib.pyplot as plt
 import pandas as pd
 
@@ -34,9 +26,6 @@ def plot_price_trend(df: pd.DataFrame, save_path: str = "manhattan_price_trend.p
 
 def build_sales_amenities_map(df_props: pd.DataFrame, amenities: pd.DataFrame,
                                 save_path: str = "manhattan_interactive_map.html"):
-    """Heatmap of sale price density + toggleable amenity layers on a real
-    OSM basemap. Uses a heatmap rather than individual markers for sales
-    since plotting 250K+ raw points would freeze the browser."""
     import folium
     from folium.plugins import HeatMap, MarkerCluster
 
