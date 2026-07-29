@@ -1,27 +1,3 @@
-"""
-Clean the consolidated Manhattan DOF sales data (2005-2025).
-
-Handles, in order:
-  1. Whitespace fragmentation in NEIGHBORHOOD / BUILDING_CLASS_CATEGORY
-     (DOF files pad values inconsistently across years - e.g. "SOHO" vs
-     "SOHO                     ", and "13 CONDOS" vs "13  CONDOS" with an
-     internal double space).
-  2. Non-market transfers ($0 / nominal deed transfers).
-  3. Known non-residential / bad-data neighborhoods (see config.py).
-  4. Non-residential building classes (offices, hotels, commercial, etc.)
-     - these produced the extreme price outliers (up to $4.1B) more
-       reliably than any price-based cap could.
-  5. Top 0.5% ultra-luxury price outliers (real sales, but a different
-     market segment than what a gentrification signal should track).
-  6. Structural missingness in square footage (concentrated almost
-     entirely in condo/co-op rows due to how DOF records those sales) -
-     flagged rather than imputed, since imputing would fabricate values
-     for ~90%+ of the dataset.
-  7. YEAR_BUILT - genuinely sparse (not structural), imputed by
-     building-class median after clearing invalid values (0, and typos
-     like "190" instead of "1900").
-"""
-
 import numpy as np
 import pandas as pd
 
