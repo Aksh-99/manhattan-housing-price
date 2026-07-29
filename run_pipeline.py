@@ -1,4 +1,3 @@
-
 import os
  
 import numpy as np
@@ -14,7 +13,7 @@ import visualization
  
  
 def main():
-    # --- 1. Clean sales data ---
+    # Clean sales data
     if os.path.exists(config.MODELING_READY_CSV):
         df = pd.read_csv(config.MODELING_READY_CSV, low_memory=False)
         print(f"Loaded cached cleaned data: {df.shape}")
@@ -25,7 +24,7 @@ def main():
  
     visualization.plot_price_trend(df)
  
-    # --- 2. Geocoding ---
+    # Geocoding
     if os.path.exists(config.GEOCODED_SALES_CSV):
         df_geocoded = pd.read_csv(config.GEOCODED_SALES_CSV, low_memory=False)
         print(f"Loaded cached geocoded data: {df_geocoded.shape}")
@@ -36,7 +35,7 @@ def main():
         df_geocoded = geocoding.attach_coordinates(df, geocoded_addrs)
         df_geocoded.to_csv(config.GEOCODED_SALES_CSV, index=False)
  
-    # --- 3. Spatial features ---
+    # Spatial features
     if os.path.exists(config.SALES_WITH_SPATIAL_CSV):
         df_spatial = pd.read_csv(config.SALES_WITH_SPATIAL_CSV, low_memory=False)
         amenities = pd.read_csv(config.AMENITIES_CSV)
@@ -47,7 +46,7 @@ def main():
         df_spatial = spatial_features.add_distance_features(df_geocoded, amenities)
         df_spatial.to_csv(config.SALES_WITH_SPATIAL_CSV, index=False)
 
-    # --- 4. Growth-rate target (+ v2 improvements: momentum, mortgage rate, log target) ---
+    # Growth-rate target 
     neighborhood_year = growth_target.build_neighborhood_year_table(df)
     growth_df = growth_target.build_growth_target(neighborhood_year)
     growth_df = growth_target.add_price_momentum(growth_df, neighborhood_year)
@@ -72,12 +71,7 @@ def main():
     model_df.to_csv(config.GROWTH_MODEL_DATASET_CSV, index=False)
     print(f"Model dataset: {model_df.shape}")
  
-    # --- 5. Modeling ---
-    # Train/evaluate on the log-transformed target (reduces the influence of
-    # extreme single-year price spikes - see growth_target.add_log_target).
-    # exclude_cols is required here: the raw (un-logged) target column must
-    # be excluded from features, or the model gets handed the answer as an
-    # input (caught during testing via a suspicious ~1.0 R^2 - see README).
+    # Modeling
     comparison = modeling.compare_random_vs_time_split(
         model_df, log_target_col, is_log_target=True, exclude_cols=[raw_target_col]
     )
@@ -92,7 +86,7 @@ def main():
         model_df, log_target_col, exclude_cols=[raw_target_col]
     )
  
-    # --- 6. Final gentrification-risk map ---
+    # Final gentrification-risk map
     latest_year = model_df["BASE_YEAR"].max()
     latest_data = model_df[model_df["BASE_YEAR"] == latest_year].copy()
     X_latest = latest_data.drop(columns=[log_target_col, raw_target_col, "NEIGHBORHOOD"])
