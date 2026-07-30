@@ -4,7 +4,7 @@ Ranks Manhattan neighborhoods by how strongly they resemble historically
 fast-growing areas — 20 years (2005-2025) of NYC DOF sales data, geospatial
 amenity data, time-aware validation.
 
-📝 [Full writeup on Medium](https://medium.com/@gopakumarakshara1999/predicting-gentrification-crystal-ball-or-rearview-mirror-8a7d63f022db)
+[Full writeup on Medium](https://medium.com/@gopakumarakshara1999/predicting-gentrification-crystal-ball-or-rearview-mirror-8a7d63f022db)
 
 **Goal:** not a precise forecast for one neighborhood, but a defensible,
 evidence-based watchlist. Price growth is the target — not "gentrification"
